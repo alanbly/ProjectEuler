@@ -1,0 +1,13 @@
+import math
+
+def factSum(num) :
+  value = 0
+  cursor = num
+  while cursor > 0 :
+    value += math.factorial(cursor % 10)
+    cursor /= 10
+  return value
+
+
+for i in range(3, 10000000) :
+  if factSum(i) == i : print i

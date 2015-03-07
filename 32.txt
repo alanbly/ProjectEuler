@@ -1,0 +1,13 @@
+def isPandigital(a,b,c) :
+  digits = list("%d%d%d" % (a,b,c))
+  digits.sort()
+  return ''.join(digits) == "123456789"
+  
+  
+products = {}
+for i in range(2,1000) :
+  for j in range(i,2000) :
+    product = i*j
+    if isPandigital(i,j,product) :
+      products[product] = True
+      print "%d * %d = %d (%d)" % (i,j,product,reduce(lambda x,y: x+y, products.keys()))

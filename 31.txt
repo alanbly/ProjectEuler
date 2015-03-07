@@ -1,0 +1,43 @@
+5p   - 1 + 1 = 2                    p, 5
+10p  - 1 + 2 + 1 = 4                p, p+5, 10
+20p  - 1 + 4 + 3 + 1 + 1 = 10       p, p+5, p+5+10, 10, 20
+
+8 + 
+
+
+1+2 1+4 1+6 1+8 1+10 
+
+n + n(n+1)
+
+subs = [200,100,50,20,10,5,2,1]
+
+
+def getSubs(max, subs) :
+  small = []
+  for i in subs :
+    if i <= max :
+      small.append(i)
+  return small
+
+
+def combos(num, subs, steps=0, path=[]) :
+  if num == 0 or len(subs) <= 1 :
+    string = ''.join(path)
+    sets[string] = True
+    return 1
+  if num < 0 :
+    return 0
+  val = 0
+  for i in subs :
+    newPath = path[:]
+    newPath.append(str(i))
+    newPath.sort(lambda a,b: cmp(int(a), int(b)))
+    next = num - i
+    val += combos(next, getSubs(i, subs), steps+1, newPath)
+  return val
+
+
+sets = {}
+combos(200, getSubs(200, subs))
+
+

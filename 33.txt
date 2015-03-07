@@ -1,0 +1,21 @@
+def reductions(num, den) :
+  if(num % 10 == 0 and den % 10 == 0) : return False
+  numStr = str(num)
+  denStr = str(den)
+  value = float(num) / float(den)
+  if numStr[1] == denStr[1] and float(numStr[0])/float(denStr[0]) == value :
+    return True
+  if numStr[1] != "0" and numStr[0] == denStr[1] and float(numStr[1])/float(denStr[0]) == value :
+    return True
+  if denStr[1] != "0" :
+    if numStr[0] == denStr[0] and float(numStr[1])/float(denStr[1]) == value :
+      return True
+    if numStr[1] == denStr[0] and float(numStr[0])/float(denStr[1]) == value :
+      return True
+      
+      
+for i in range(10, 100) :
+  for j in range(i+1, 100) :
+    if reductions(i, j) : print "%d / %d = %f" % (i, j, float(i) / float(j))
+
+1/4 * 1/5 * 2/5 * 1/2 = 1/100

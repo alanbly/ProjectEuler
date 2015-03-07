@@ -1,0 +1,57 @@
+def isPrime(n):
+  i = 2
+  while i<=sqrt(n):
+    if n%i==0:
+      return False
+    i+=1
+  return True
+
+def primes(n):
+  # all even numbers greater than 2 are not prime.
+  s = [False]*2 + [True]*2 + [False,True]*((n-4)//2) + [False]*(n%2)
+  i = 3;
+  limit = n**0.5
+  while i < limit:
+    sq = i*i
+    # get rid of ** and skip even numbers.
+    s[sq : n : i*2] = [False]*(1+(n-sq)//(i*2))
+    i += 2
+    # skip non-primes
+    while not s[i]: i += 2
+  return s
+  
+  
+def attempt(a, b, n) :
+  return primeList[n*n + a*n + b]
+  
+  
+def count(a, b) :
+  n = 0
+  while attempt(a, b, n) : n += 1
+  return n
+  
+  
+for i in range(0, 1000) :
+  for j in range(0, 1000) :
+    if primeList[j] :
+      num = count(i, j)
+      if num > best :
+        best = num
+        prod = i*j
+        print "%d*%d=%d (%d)" % (i,j,prod,best)
+      num = count(-1*i, j)
+      if num > best :
+        best = num
+        prod = -1*i*j
+        print "-%d*%d=%d (%d)" % (i,j,prod,best)
+      num = count(-1*i, -1*j)
+      if num > best :
+        best = num
+        prod = i*j
+        print "-%d*-%d=%d (%d)" % (i,j,prod,best)
+      num = count(i, -1*j)
+      if num > best :
+        best = num
+        prod = -1*i*j
+        print "%d*-%d=%d (%d)" % (i,j,prod,best)
+

@@ -1,0 +1,941 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"re",
+				"relativePrimes"
+			],
+			[
+				"is",
+				"isTriangle"
+			],
+			[
+				"rem",
+				"removeCatalogItem"
+			],
+			[
+				"lin",
+				"lineItems"
+			],
+			[
+				"call",
+				"callbackValue"
+			],
+			[
+				"and",
+				"andReturn"
+			],
+			[
+				"line",
+				"lineItem"
+			],
+			[
+				"tr",
+				"transformResponse"
+			],
+			[
+				"Re",
+				"RequestTransform"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"co",
+				"contryCode"
+			],
+			[
+				"to",
+				"toHaveBeenCalledWith"
+			],
+			[
+				"mo",
+				"mockIdc"
+			],
+			[
+				"id",
+				"mockIdc"
+			],
+			[
+				"c",
+				"calls"
+			],
+			[
+				"expl",
+				"expandlineItems"
+			],
+			[
+				"a",
+				"ASKUs"
+			],
+			[
+				"off",
+				"offersMock"
+			],
+			[
+				"de",
+				"detailsMock"
+			],
+			[
+				"con",
+				"countryMock"
+			],
+			[
+				"sele",
+				"selectedCountry"
+			],
+			[
+				"rese",
+				"resellerCountry"
+			],
+			[
+				"pass",
+				"passedOffers"
+			],
+			[
+				"chain",
+				"chainFunction"
+			],
+			[
+				"expan",
+				"expandLineItems"
+			],
+			[
+				"exp",
+				"expandLineItem"
+			],
+			[
+				"KO",
+				"KOR-B2B-Portal"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "243.py",
+			"settings":
+			{
+				"buffer_size": 882,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Package Control Messages\n========================\n\nPackage Control:\n---------------\n\n  Version 3.0 Release Notes\n  \n  \n  **** Windows Sublime Text 3 Users ****\n  \n  Due to a bug in Package Control 2.0, Windows ST3 users will need to open the\n  Sublime Text console (ctrl+`) and execute the following Python to properly\n  upgrade. All other users may ignore this part of the message.\n  \n  Make sure NOT to copy the leading two spaces, or an \"unexpected indent\" error\n  will occur.\n  \n  import urllib.request,os,sys; exec(\"if sys.version_info < (3,) or os.name != 'nt': raise OSError('This code is for Windows ST3 only!')\"); pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')\n  \n  ********\n  \n  \n  Package Control 3.0 adds a bunch of polish, improving the Sublime Text\n  experience for users and package developers:\n  \n   - improved upgrades of themes, color schemes and syntaxes\n   - dependency support\n   - SSL for Linux\n   - new secondary Windows HTTP backend\n   - patches for Python in Sublime Text 2 on Windows\n   - commands to easily remove channels and repositories\n   - an events API for packages\n   - improved documentation\n  \n  \n  As of July 2014, I now work for myself. This has allowed me to spend more time\n  working on open source software, including Package Control. If you appreciate\n  the work I've done, please consider a small donation. If even 5% of regular\n  users donated the price of a coffee or beer, that would cover quite a bit of\n  my development time! See https://packagecontrol.io/about for options.\n  \n  \n  Some recent Package Control stats:\n  \n   - every weekday over 1M JSON requests hit the channel server\n   - in December, the channel server will transmit 4TB+ of compressed JSON\n   - users have installed, upgraded or removed 85M+ packages since late 2011\n  \n  \n  Read more about the release at:\n  \n  https://packagecontrol.io/news#2014-12-23-Package_Control_30_Released\n  \n",
+			"settings":
+			{
+				"buffer_size": 2443,
+				"line_ending": "Unix",
+				"name": "Package Control Messages",
+				"scratch": true
+			}
+		},
+		{
+			"file": "primes.py",
+			"settings":
+			{
+				"buffer_size": 1386,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 68 files for \"totient\" (regex)\n\n0 matches across 0 files\n\n\nSearching 68 files for \"phi\" (regex)\n\n/Users/alanbly/Dropbox/Programming/Euler/69.py:\n   46    return True\n   47  \n   48: phis = {}\n   49: def phi(num) :\n   50    if num == 1 : return 1\n   51:   if num in phis : return phis[num]\n   52    if isPrime(num) :\n   53:     phis[num] = num-1\n   54      return num-1\n   55    product = num\n   ..\n   59  \n   60  \n   61: max([(i, float(i)/phi(i)) for i in range(2,10**6+1)], key=lambda x: x[1])\n   62  \n\n/Users/alanbly/Dropbox/Programming/Euler/70.py:\n   46    return True\n   47  \n   48: phis = {}\n   49: def phi(num) :\n   50    if num == 1 : return 1\n   51:   if num in phis : return phis[num]\n   52    if isPrime(num) :\n   53:     phis[num] = num-1\n   54      return num-1\n   55    product = num\n   ..\n   63  \n   64  \n   65: min([(i, float(i)/j) for i, j in [(i, phi(i)) for i in range(2,10**7)] \\\n   66    if isPermutation(i,j)], key=lambda x: x[1])\n   67  \n\n/Users/alanbly/Dropbox/Programming/Euler/72.py:\n   47  \n   48  \n   49: phis = {}\n   50: def phi(num) :\n   51    if num == 1 : return 1\n   52:   if num in phis : return phis[num]\n   53    if isPrime(num) :\n   54:     phis[num] = num-1\n   55      return num-1\n   56    product = num\n   ..\n   61  \n   62  def fractions(num) :\n   63:   return sum([phi(i) for i in range(2,num+1)])\n   64  \n   65  \n\n18 matches across 3 files\n\n\nSearching 69 files for \"primefactors\" (regex)\n\n/Users/alanbly/Dropbox/Programming/Euler/47.py:\n    1: def primefactors(n):\n    2      i = 2\n    3      while i<=sqrt(n):\n    4          if n%i==0:\n    5:             l = primefactors(n//i)\n    6              l.append(i)\n    7              return l\n    .\n   14  one = 0\n   15  for i in range(2, 10**6) :\n   16:   curr = len(set(primefactors(i)))\n   17    if three >= 4 and two >= 4 and one >= 4 and curr >= 4 :\n   18      print \"%d-%d\" % (i-3,i)\n\n/Users/alanbly/Dropbox/Programming/Euler/69.py:\n   54      return num-1\n   55    product = num\n   56:   for factor in set(primefactors(num)) :\n   57      product *= (1-1.0/factor)\n   58    return math.trunc(product)\n\n/Users/alanbly/Dropbox/Programming/Euler/70.py:\n   54      return num-1\n   55    product = num\n   56:   for factor in set(primefactors(num)) :\n   57      product *= (1-1.0/factor)\n   58    return math.trunc(product)\n\n/Users/alanbly/Dropbox/Programming/Euler/72.py:\n   55      return num-1\n   56    product = num\n   57:   for factor in set(primefactors(num)) :\n   58      product *= (1-1.0/factor)\n   59    return math.trunc(product)\n\n/Users/alanbly/Dropbox/Programming/Euler/divisor.py:\n   18  \n   19  \n   20: def primefactors(n):\n   21      i = 2\n   22      while i<=sqrt(n):\n   23          if n%i==0:\n   24:             l = primefactors(n//i)\n   25              l.append(i)\n   26              return l\n   ..\n   31  def factorGenerator(n):\n   32      '''Generates prime factors for given number.'''\n   33:     p = primefactors(n)\n   34      factors={}\n   35      for p1 in p:\n\n/Users/alanbly/Dropbox/Programming/Euler/primes.py:\n   54      return num-1\n   55    product = num\n   56:   for factor in set(primefactors(num)) :\n   57      product *= (1-1.0/factor)\n   58    return trunc(product)\n\n10 matches across 6 files\n",
+			"settings":
+			{
+				"buffer_size": 3224,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "415.py",
+			"settings":
+			{
+				"buffer_size": 2120,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "415.slow.py",
+			"settings":
+			{
+				"buffer_size": 2120,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "divisor.py",
+			"settings":
+			{
+				"buffer_size": 1250,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "72.py",
+			"settings":
+			{
+				"buffer_size": 1325,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"ext",
+				"Set Syntax: HTML (Tcl)"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/alanbly/Dropbox/Programming/Euler/76.py",
+		"/Users/alanbly/Dropbox/Programming/Euler/75.py",
+		"/Users/alanbly/Dropbox/Programming/Euler/p081_matrix.txt",
+		"/Users/alanbly/Dropbox/Programming/Euler/81.py",
+		"/Users/alanbly/Dropbox/Programming/Euler/47.py",
+		"/Users/mcadam/.bashrc",
+		"/Volumes/mcadam-1/.bashrc",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/tst/unit/catalogTest.js",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/catalog.js",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/tst/unit/purchaseOrder.js",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/purchaseOrder.js",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/tst/unit/detailsAndOffers.js",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/detailsAndOffers.js",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/tst/unit/checkoutTest.js",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/checkout.js",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/korxResource.js",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/resellers.js",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/location.js",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/payments.js",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/build/private/tmp/lib/angular.js",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/services.js",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/tst/unit/services.js",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/catalogue",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/portal-common.js",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/itemDetail.js",
+		"/Volumes/mcadam-1/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/tst/unit/itemDetail.js",
+		"/Volumes/mcadam/.bashrc",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/tst/unit/browseTreeTests.js",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/browseTree.js",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/addresses.js",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/tst/karma.conf.js",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/env/NodeJS-istanbul-0.1.44/runtime/lib/commonjs/istanbul/lib/object-utils.js",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/env/NodeJS-istanbul-0.1.44/runtime/lib/commonjs/istanbul/lib/util/file-matcher.js",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/env/NodeJS-istanbul-0.1.44/runtime/lib/commonjs/istanbul/lib/command/check-coverage.js",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/env/NodeJS-istanbul-0.1.44/runtime/lib/commonjs/istanbul/lib/collector.js",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/tst/unit/register.js",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/tst/unit/checkoutTest.js",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/checkout.js",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-internal/js/features.js",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/config.js",
+		"/Volumes/mcadam/workplace/OPFTenantConfig_KORPortalNA/src/OPFTenantConfig_KORPortalNA/rumba/Beta/b2b-1box.integ.amazon.com/rumba.xml",
+		"/Volumes/mcadam/workplace/OPFTenantConfig_KORPortalNA/src/OPFTenantConfig_KORPortalNA/rumba/Beta/b2b.integ.amazon.com/rumba.xml",
+		"/Volumes/mcadam/workplace/OPFTenantConfig_KORPortalNA/src/OPFTenantConfig_KORPortalNA/rumba/Beta/source.integ.amazon.com/rumba.xml",
+		"/Volumes/mcadam/workplace/OPFTenantConfig_KORPortalNA/src/OPFTenantConfig_KORPortalNA/rumba/Beta/source-1box.integ.amazon.com/rumba.xml",
+		"/Volumes/mcadam/workplace/OPFTenantConfig_KORPortalNA/src/OPFTenantConfig_KORPortalNA/rumba/Prod/source.amazon.com/routes.xml",
+		"/Volumes/mcadam/workplace/OPFTenantConfig_KORPortalNA/src/OPFTenantConfig_KORPortalNA/rumba/Prod/b2b.amazon.com/routes.xml",
+		"/Volumes/mcadam/workplace/OPFTenantConfig_KORPortalNA/src/OPFTenantConfig_KORPortalNA/rumba/Gamma/source-gamma.amazon.com/rumba.xml",
+		"/Volumes/mcadam/workplace/OPFTenantConfig_KORPortalNA/src/OPFTenantConfig_KORPortalNA/rumba/Prod/source.amazon.com/rumba.xml",
+		"/Volumes/mcadam/workplace/OpfTenant/src/OPFTenantConfig_KORPortalNA/rumba/Beta/source.integ.amazon.com/rumba.xml",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/information.js",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/program.js",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/src/templates/welcomefaq.html",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/tst/unit/program.js",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/src/templates/orderSummary.html",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/src/templates/addressSelect.html",
+		"/Volumes/mcadam/amber.zshrc",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal/tst/com/amazon/kor/b2bportal/shipping/ShippingOptionsFacadeImplTest.java",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal/src/com/amazon/kor/b2bportal/shipping/ShippingOption.java",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/apollo-overrides/KOR-B2B-Portal/webapps/HorizonteWebApp/WEB-INF/tags/korx/powerbar.tag",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal/build/webapps/HorizonteWebApp/WEB-INF/tags/korx/powerbar.tag",
+		"/Volumes/mcadam/workplace/KOR-B2B-Portal/src/KOR-B2B-Portal/configuration/webapps/HorizonteWebApp/WEB-INF/tags/korx/powerbar.tag",
+		"/Users/mcadam/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/mcadam/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Volumes/mcadam/workplace/OpfTenant/src/OPFTenantConfig_KORPortalNA/rumba/Prod/source.amazon.com/routes.xml",
+		"/Volumes/mcadam/.zshrc"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"primefactors",
+			"phi",
+			"totient",
+			"prime",
+			"gcd",
+			"gcf",
+			"hcf",
+			"gcf",
+			"coprime",
+			"[ \\t]*console.log.*\\n",
+			"					console.log(\"expandLineItems\");",
+			"[ \\t]*console.log.*",
+			"[ \\t]*console.log.*\\n",
+			"pulling",
+			"cartUpdate",
+			"addToCart",
+			"addCatalogQuantity",
+			"PaymentsPortalWidget",
+			"request",
+			"transformReq",
+			"toJson",
+			"onLineItemSaveFactory",
+			"[ \\t]*console.log.*\\n",
+			"$scope.order.chain",
+			"setlineitemq",
+			"setlineitem",
+			"purchaseorder",
+			"then =",
+			"mergeFileCoverage",
+			"portal.config",
+			"Notification",
+			"CustomerPO",
+			"route",
+			"hasShippingOptions",
+			"hasShippingOptions\\",
+			"hasShippingOptions",
+			"hasShippingOptionsEnabled",
+			"isShippingOptionsEnabled",
+			"}\n",
+			"Powerbar!"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"",
+			"Cliffbar!"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "243.py",
+					"settings":
+					{
+						"buffer_size": 882,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								654,
+								654
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"settings":
+					{
+						"buffer_size": 2443,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2443,
+								2443
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "primes.py",
+					"settings":
+					{
+						"buffer_size": 1386,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1386
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 84.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"settings":
+					{
+						"buffer_size": 3224,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										191,
+										194
+									],
+									[
+										212,
+										215
+									],
+									[
+										274,
+										277
+									],
+									[
+										288,
+										291
+									],
+									[
+										336,
+										339
+									],
+									[
+										448,
+										451
+									],
+									[
+										597,
+										600
+									],
+									[
+										618,
+										621
+									],
+									[
+										680,
+										683
+									],
+									[
+										694,
+										697
+									],
+									[
+										742,
+										745
+									],
+									[
+										874,
+										877
+									],
+									[
+										1042,
+										1045
+									],
+									[
+										1063,
+										1066
+									],
+									[
+										1125,
+										1128
+									],
+									[
+										1139,
+										1142
+									],
+									[
+										1187,
+										1190
+									],
+									[
+										1315,
+										1318
+									],
+									[
+										1499,
+										1511
+									],
+									[
+										1611,
+										1623
+									],
+									[
+										1768,
+										1780
+									],
+									[
+										2009,
+										2021
+									],
+									[
+										2226,
+										2238
+									],
+									[
+										2443,
+										2455
+									],
+									[
+										2618,
+										2630
+									],
+									[
+										2730,
+										2742
+									],
+									[
+										2919,
+										2931
+									],
+									[
+										3108,
+										3120
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								1393,
+								1393
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"output_tag": 3,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 930.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "415.py",
+					"settings":
+					{
+						"buffer_size": 2120,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								931,
+								819
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 202.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "415.slow.py",
+					"settings":
+					{
+						"buffer_size": 2120,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1726,
+								1500
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 309.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "divisor.py",
+					"settings":
+					{
+						"buffer_size": 1250,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "72.py",
+					"settings":
+					{
+						"buffer_size": 1325,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1234,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"prchaseo",
+				"KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/purchaseOrder.js"
+			],
+			[
+				"purchaseo",
+				"KOR-B2B-Portal-BrowserScripts/tst/unit/purchaseOrder.js"
+			],
+			[
+				"payments.js",
+				"KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/payments.js"
+			],
+			[
+				"angular",
+				"KOR-B2B-Portal-BrowserScripts/build/private/tmp/lib/angular.js"
+			],
+			[
+				"location.",
+				"KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/location.js"
+			],
+			[
+				"resell",
+				"KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/resellers.js"
+			],
+			[
+				"serv",
+				"KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/services.js"
+			],
+			[
+				"servi",
+				"KOR-B2B-Portal-BrowserScripts/tst/unit/services.js"
+			],
+			[
+				"loca",
+				"KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/location.js"
+			],
+			[
+				"detailsa",
+				"KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/detailsAndOffers.js"
+			],
+			[
+				"deta",
+				"KOR-B2B-Portal-BrowserScripts/tst/unit/detailsAndOffers.js"
+			],
+			[
+				"location",
+				"KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/location.js"
+			],
+			[
+				"addre",
+				"KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/addresses.js"
+			],
+			[
+				"services",
+				"KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/services.js"
+			],
+			[
+				"korx",
+				"KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/korxResource.js"
+			],
+			[
+				"collector",
+				"KOR-B2B-Portal/env/NodeJS-istanbul-0.1.44/runtime/lib/commonjs/istanbul/lib/collector.js"
+			],
+			[
+				"checkc",
+				"KOR-B2B-Portal/env/NodeJS-istanbul-0.1.44/runtime/lib/commonjs/istanbul/lib/command/check-coverage.js"
+			],
+			[
+				"filematcher",
+				"KOR-B2B-Portal/env/NodeJS-istanbul-0.1.44/runtime/lib/commonjs/istanbul/lib/util/file-matcher.js"
+			],
+			[
+				"object-",
+				"KOR-B2B-Portal/env/NodeJS-istanbul-0.1.44/runtime/lib/commonjs/istanbul/lib/object-utils.js"
+			],
+			[
+				"checkout",
+				"KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/checkout.js"
+			],
+			[
+				"checkoutt",
+				"KOR-B2B-Portal-BrowserScripts/tst/unit/checkoutTest.js"
+			],
+			[
+				"catalog.js",
+				"KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/catalog.js"
+			],
+			[
+				"catalog",
+				"KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/catalog.js"
+			],
+			[
+				"browset",
+				"KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/browseTree.js"
+			],
+			[
+				"rumba.xml",
+				"OPFTenantConfig_KORPortalNA/src/OPFTenantConfig_KORPortalNA/rumba/Prod/source.amazon.com/rumba.xml"
+			],
+			[
+				"routs",
+				"OPFTenantConfig_KORPortalNA/src/OPFTenantConfig_KORPortalNA/rumba/Prod/b2b.amazon.com/routes.xml"
+			],
+			[
+				"routes.xml",
+				"OPFTenantConfig_KORPortalNA/src/OPFTenantConfig_KORPortalNA/rumba/Prod/source.amazon.com/routes.xml"
+			],
+			[
+				"runmba.xml",
+				"OPFTenantConfig_KORPortalNA/src/OPFTenantConfig_KORPortalNA/rumba/Beta/source.integ.amazon.com/rumba.xml"
+			],
+			[
+				"rum",
+				"OPFTenantConfig_KORPortalNA/src/OPFTenantConfig_KORPortalNA/rumba/Beta/b2b-1box.integ.amazon.com/rumba.xml"
+			],
+			[
+				"config",
+				"KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/config.js"
+			],
+			[
+				"feature",
+				"KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-internal/js/features.js"
+			],
+			[
+				"information",
+				"KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/information.js"
+			],
+			[
+				"program",
+				"KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/browser-scripts/source/kor-b2b-portal-browserscripts-common/js/program.js"
+			],
+			[
+				"wel",
+				"KOR-B2B-Portal-BrowserScripts/src/templates/welcomefaq.html"
+			],
+			[
+				"welcomef",
+				"KOR-B2B-Portal/src/KOR-B2B-Portal-BrowserScripts/src/templates/welcomefaq.html"
+			],
+			[
+				"checkou",
+				"KOR-B2B-Portal-BrowserScripts/tst/unit/checkoutTest.js"
+			],
+			[
+				"power",
+				"KOR-B2B-Portal/src/KOR-B2B-Portal/configuration/webapps/HorizonteWebApp/WEB-INF/tags/korx/powerbar.tag"
+			],
+			[
+				"powerbar",
+				"KOR-B2B-Portal/src/KOR-B2B-Portal/build/webapps/HorizonteWebApp/WEB-INF/tags/korx/powerbar.tag"
+			],
+			[
+				"powerbar.tag",
+				"KOR-B2B-Portal/apollo-overrides/KOR-B2B-Portal/webapps/HorizonteWebApp/WEB-INF/tags/korx/powerbar.tag"
+			],
+			[
+				"powe",
+				"KOR-B2B-Portal/apollo-overrides/KOR-B2B-Portal/webapps/HorizonteWebApp/WEB-INF/tags/korx/powerbar.tag"
+			],
+			[
+				"powerb",
+				"KOR-B2B-Portal/apollo-overrides/KOR-B2B-Portal/webapps/HorizonteWebApp/WEB-INF/tags/korx/powerbar.tag"
+			],
+			[
+				"shipping",
+				"KOR-B2B-Portal/src/KOR-B2B-Portal/src/com/amazon/kor/b2bportal/shipping/ShippingOption.java"
+			],
+			[
+				"sopt",
+				"KOR-B2B-Portal/src/KOR-B2B-Portal/tst/com/amazon/kor/b2bportal/shipping/ShippingOptionsFacadeImplTest.java"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 271.0,
+	"status_bar_visible": true
+}

@@ -1,0 +1,20 @@
+fifths = []
+def canBeFifths(num) :
+  val = 0
+  cursor = num
+  while cursor > 0 :
+    val += (cursor % 10) ** 5
+    cursor /= 10
+  return val == num
+  
+
+def canBeFourths(num) :
+  val = 0
+  cursor = num
+  while cursor > 0 :
+    val += (cursor % 10) ** 4
+    cursor /= 10
+  return val == num
+  
+for i in range(2,1000000) :
+  if canBeFifths(i) : fifths.append(i)

@@ -1,0 +1,15 @@
+def isPandigital(string) :
+  digits = list(string)
+  digits.sort()
+  return ''.join(digits) == "123456789"
+
+
+for i in range(1,10000) :
+  string = str(i)
+  mult = 2
+  while len(string) < 9 :
+    string += str(mult*i)
+  if len(string) == 9 and isPandigital(string) :
+    print "%d -> %s" % (i, string)
+    
+

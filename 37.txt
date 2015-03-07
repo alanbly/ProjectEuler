@@ -1,0 +1,30 @@
+def primes(n):
+  # all even numbers greater than 2 are not prime.
+  s = [False]*2 + [True]*2 + [False,True]*((n-4)//2) + [False]*(n%2)
+  i = 3;
+  limit = n**0.5
+  while i < limit:
+    sq = i*i
+    # get rid of ** and skip even numbers.
+    s[sq : n : i*2] = [False]*(1+(n-sq)//(i*2))
+    i += 2
+    # skip non-primes
+    while not s[i]: i += 2
+  return s
+  
+  
+primeList = primes(10**6)
+
+
+def leftPrimes(num) :
+  return primeList[num] and (num < 10 or leftPrimes(num/10))
+
+
+def rightPrimes(num) :
+  return primeList[num] and (num < 10 or rightPrimes(int(str(num)[1:])))
+
+
+rotated = []
+for prime in range(13,10**6) :
+  if primeList[prime] and leftPrimes(prime) and rightPrimes(prime) : rotated.append(prime)
+    

@@ -1,0 +1,17 @@
+for i in abundants :
+  for j in abundants :
+    found[i+j] = True
+
+for i in range(1,top+1) :
+  isSum = False
+  if i not in nextFound :
+    for ab in nextFound :
+      diff = i - ab
+      if diff < 1 :
+        break
+      if diff in nextFound :
+        isSum = True
+        break
+  if isSum :
+    nextFound[i] = True
+

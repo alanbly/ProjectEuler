@@ -1,0 +1,10 @@
+step = 2
+next = 1
+old = 1
+while next < 10**1000 :
+  current = old + next
+  old = next
+  next = current
+  step += 1
+
+next

@@ -1,0 +1,35 @@
+def binomial(n,k):
+  bc = [1 for i in range(0,k+1)]
+  for j in range(1,n-k+1):
+    for i in range(1,k+1):
+      bc[i] = bc[i-1]+bc[i]
+  return bc[k]
+  
+
+def permute(n, r): return reduce(lambda x, y: x * y, range(n - r + 1, n + 1))
+ 
+
+def permutations(n) : return permute(n,n)
+
+
+def getUnused(string, digits) :
+  unused = []
+  for j in [str(x) for x in range(0,digits)] :
+    if j not in string : unused.append(j)
+  return unused
+
+
+def findNth(n, digits) :
+  cursor = n
+  string = ""
+  for i in range(1, digits)[::-1] :
+    step = permutations(i)
+    steps = cursor / step
+    unused = getUnused(string, digits)
+    digit = unused[steps]
+    cursor %= step
+    string += digit
+    print "%d : %d : %d : %d : %s : %s" % (i, cursor, step, steps, digit, string)
+  string += getUnused(string, digits)[0]
+  return string
+

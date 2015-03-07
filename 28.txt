@@ -1,0 +1,11 @@
+val = 1
+step = 2
+cursor = 1
+while step < 1001 :
+  for i in range(0,4) :
+    cursor += step
+    val += cursor
+    print cursor
+  print "%d %d" % (step, val)
+  step += 2
+  

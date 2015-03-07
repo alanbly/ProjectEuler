@@ -1,0 +1,32 @@
+def rotate(n) :
+  string = str(n)
+  return int(string[-1]+string[:-1])
+
+
+def primes(n):
+  # all even numbers greater than 2 are not prime.
+  s = [False]*2 + [True]*2 + [False,True]*((n-4)//2) + [False]*(n%2)
+  i = 3;
+  limit = n**0.5
+  while i < limit:
+    sq = i*i
+    # get rid of ** and skip even numbers.
+    s[sq : n : i*2] = [False]*(1+(n-sq)//(i*2))
+    i += 2
+    # skip non-primes
+    while not s[i]: i += 2
+  return s
+  
+  
+rotated = []
+for prime in range(2,10**6) :
+  if primeList[prime] :
+    copy = rotate(prime)
+    found = True
+    while copy != prime :
+      if not primeList[copy] :
+        found = False
+        break
+      copy = rotate(copy)
+    if found : 
+      rotated.append(prime)
